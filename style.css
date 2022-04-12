@@ -1,0 +1,314 @@
+@charset "UTF-8";
+
+/* ----------------------------------
+共通部分
+------------------------------------- */
+html {
+    font-size: 100%;
+}
+
+body {
+    background-color: #fff
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: .5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(500px, 1fr));
+    gap: 60px;
+    justify-items: center;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(235px, 1fr));
+    gap: 60px;
+    justify-items: center;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: #590204;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+h3 {
+    color: #fff;
+}
+
+/* ----------------------------------
+header
+------------------------------------- */
+header {
+    min-height: 100px;
+    border-top: 15px solid #70285d;
+    border-bottom: 10px solid #a7af82;
+    padding: 10px 50px;
+}
+
+.div_header {
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.nav_ol_li {
+    color: #70285d;
+}
+
+.nav_ol_li + .nav_ol_li::before {
+    content: "//";
+    margin: 0 15px;
+}
+
+/* ----------------------------------
+footer
+------------------------------------- */
+footer {
+    min-height: 200px;
+    background-color: #f7f7e4;
+    padding: 60px 50px 0 50px;
+}
+
+.footer_div {
+    justify-content: space-between;
+}
+
+.copy {
+    color: #a7af82;
+}
+
+.footer_div2 + .footer_div2::before {
+    content: "//";
+    margin: 0 15px;
+}
+
+
+
+/* ----------------------------------
+.main
+------------------------------------- */
+.main {
+    position: relative;
+    background-image: url(img/hero.png);
+    min-height: 360px;
+    width: 100%;
+    background-repeat:  no-repeat;                         /* 画像の繰り返しを指定  */              
+    background-position:right center;                     /* 画像の表示位置を指定  */
+    background-size:cover;
+}
+
+.signbord_img {
+    position:  absolute;        /* 要素の配置方法を指定 */
+    /* background-color: #ccc;     背景色指定 */
+    padding:  20px;             /* 余白指定 */
+    left: -150px;                /* 右からの位置指定 */
+    top: 10px;                  /* 上からの位置指定 */
+}
+
+.signbord_p {
+    position:  absolute;        /* 要素の配置方法を指定 */
+    /* background-color: #ccc;     背景色指定 */
+    padding:  20px;             /* 余白指定 */
+    left: -95px;                /* 右からの位置指定 */
+    top: 75px;                  /* 上からの位置指定 */
+    color: #70285d;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+
+.main_div2 {
+    max-width: 420px;
+    margin: 60px 50px;
+    background: rgba(231, 231, 210, 0.8)
+}
+
+.main_p {
+    font-size: 1.25rem;
+    color: #5f6d1f;
+}
+
+.main_div3 {
+    font-size: 1.3rem;
+    color: #70285d;
+}
+
+.main_a::after {
+    content: ">>";
+    margin-left: 5px;
+    font-size: 1rem;
+}
+
+/* ----------------------------------
+.content
+------------------------------------- */
+.content {
+    min-height: 300px;
+    background-color: #949c71;
+    padding: 50px;
+}
+
+.content2_div {
+    max-width: 500px;
+    padding-bottom: 10px;
+    align-items: center;
+}
+
+.a {
+    max-width: 45%
+}
+
+.content_img {
+    max-width: 100%;
+    height: auto;
+}
+
+.content3_div {
+    max-width: 55%;
+    margin-left: 30px;
+    padding-right: 30px;
+
+}
+
+.content_p {
+    color: #fff;
+    font-size: 1.1rem;
+}
+/* ----------------------------------
+.special
+------------------------------------- */
+.special {
+    min-height: 200px;
+    background-color: #793566;
+    padding: 20px 60px 30px;
+}
+
+.special2_div {
+    align-items: center;
+    max-width: 330px;
+    min-height: 150px;
+}
+
+.special_img {
+    min-width: 40px;
+}
+
+.special3_div {
+    margin-left: 20px;
+}
+
+.special_p {
+    color: #fff;
+}
+
+.special_a_p {
+    color: #fd89de;
+}
+
+.special_a_p::after {
+    content: ">>";
+    margin-left: 5px;
+    font-size: 1rem;
+}
+
+.special_a_p:hover {
+    opacity: .5;
+}
+
+/* ----------------------------------
+.SP
+------------------------------------- */
+@media screen and (max-width:649px) {
+    /* 共通部分 */
+    .div_header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer_div {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grid2 {
+        grid-template-columns: 1fr;
+    }
+
+/* ----------------------------------
+header
+------------------------------------- */
+    .nav_ol {
+        margin-top: 20px;
+    }
+
+/* ----------------------------------
+footer
+------------------------------------- */
+    .footer_nav {
+        margin-bottom: 80px;
+    }
+
+
+/* ----------------------------------
+.main
+------------------------------------- */
+    .signboard {
+        display: none;
+    }
+/* ----------------------------------
+.special
+------------------------------------- */
+.special_img {
+    min-width: 40px;
+}
+
+.special h3 {
+    font-size: 2rem;
+}
+
+.special p {
+    font-size: 1.5rem;
+}
+
+.special_a_p::after {
+    font-size: 1.5rem;
+}
+
+
+}
+
+
